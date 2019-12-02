@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Auth from "./Auth/Auth";
+import Auth from "./components/Auth/Auth";
 
 
 

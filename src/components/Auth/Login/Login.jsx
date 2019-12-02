@@ -10,13 +10,13 @@ const Login = () => {
     return (
         <div>
             <div className='loginFromText'>
-                <h1>Войдите в аккаунт</h1>
-                <p>Пожалуйста, войдите в свой аккаунт</p>
+                <h1>Log in to your account.</h1>
+                <p>Please, log in to your account.</p>
             </div>
             <Block>
                 <LoginForm/>
                 <div>
-                    <NavLink to='/registration'>Зарегистрироваться</NavLink>
+                    <NavLink to='/registration'>Sign up</NavLink>
                 </div>
             </Block>
         </div>
