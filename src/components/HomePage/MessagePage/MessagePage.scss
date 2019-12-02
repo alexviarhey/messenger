@@ -1,0 +1,121 @@
+.message {
+  display: flex;
+  max-width: 440px;
+  margin-bottom: 15px;
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 13px;
+    margin-bottom: 10px;
+  }
+
+  &__avatar img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    .message__bubble {
+      background: #3674ff;
+      box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.196);
+      padding: 15px 18px;
+      margin-bottom: 8px;
+      border-radius: 12px 12px 12px 0px;
+
+      .message__text {
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .message__typing {
+        span {
+          width: 8px;
+          height: 8px;
+          display: inline-block;
+          border-radius: 50%;
+          margin-right: 8px;
+          background: #ffffff;
+          animation-name: typingAnimation;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-duration: 0.9s;
+          &:nth-of-type(2) {
+            animation-duration: 0.9s;
+            animation-delay: 0.4s;
+          }
+          &:nth-of-type(3) {
+            animation-duration: 0.9s;
+            animation-delay: 0.7s;
+          }
+        }
+        @keyframes typingAnimation {
+          from {
+            opacity: .1;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .message__date {
+      font-size: 12px;
+      opacity: .5;
+    }
+  }
+}
+
+.message_me {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 15px;
+  position: relative;
+
+
+  .message__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 13px;
+    margin-bottom: 10px;
+  }
+
+  .message__content {
+    display: flex;
+    flex-direction: column;
+
+    .message__bubble {
+      background: #ffffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+      border: 1px solid #ececec;
+      padding: 15px;
+      margin-bottom: 8px;
+      border-radius: 12px 12px 0px 12px;
+
+      .message__text {
+        color: #000000;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .message__date {
+      font-size: 12px;
+      opacity: .5;
+      text-align: right;
+    }
+  }
+  &__check {
+    position: absolute;
+    left: -25px;
+    bottom: 20px
+  }
+
+}

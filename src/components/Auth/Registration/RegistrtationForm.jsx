@@ -40,8 +40,8 @@ const RegistrationForm = () => {
 
                 <div className='loginForm__inputWrapp'>
                     <input ref={register({required: true})} name='repeatPassword' placeholder='Repeat password'
-                           type='password' className={errors.password ? 'input_error' : 'input'}/>
-                    {errors.password && <span className='loginError'>Field is required</span>}
+                           type='password' className={errors.repeatPassword ? 'input_error' : 'input'}/>
+                    {errors.repeatPassword && <span className='loginError'>Field is required</span>}
                 </div>
                 <Button htmlType='submit' name='Sign up' type='primary' size='large'/>
             </form>

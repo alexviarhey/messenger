@@ -6,7 +6,7 @@ import {Route} from "react-router-dom";
 
 const Auth = () => {
     return (
-        <div>
+        <div className='authWrapper'>
             <Route exact path={['/', '/login']} render={() => <Login/>} />
             <Route path={'/registration'} render={() => <Registration/>} />
         </div>
