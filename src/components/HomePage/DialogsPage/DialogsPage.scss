@@ -1,0 +1,75 @@
+.dialog {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom:40px;
+  &__avatar, &__avatar-online {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__avatar-online::before {
+    content: '';
+    background-color: green;
+    border-radius: 30px;
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    right: 3px;
+    top: 2px;
+  }
+
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+
+      &-userName {
+
+      }
+
+      &-date {
+        opacity: .5;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+
+      &-text {
+        opacity: .5;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 230px;
+        height: 1.2em;
+        white-space: nowrap;
+      }
+      &-message-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        color: #FFFFFF;
+        width: 100%;
+        max-width: 22px;
+        height: 18px;
+        border-radius: 50%;
+        background: #f46b6b;
+      }
+    }
+  }
+
+
+}
